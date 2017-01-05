@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { LocationPage } from '../location/location';
+import { MyDetailsPage } from '../my-details/my-details';
+import { CampDetailsPage } from '../camp-details/camp-details';
 
 import { NavController } from 'ionic-angular';
 
@@ -8,7 +11,14 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+    //Variables
+    tab1Root: any = LocationPage;
+    tab2Root: any = MyDetailsPage;
+    tab3Root: any = CampDetailsPage;
+
+  constructor() {
+
+
     
   }
 
