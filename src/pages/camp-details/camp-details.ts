@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Data } from '../../providers/data';
 
 /*
   Generated class for the CampDetails page.
@@ -13,10 +15,12 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class CampDetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public dataService: Data) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CampDetailsPage');
+  saveForm(): void
+  {
+
+
   }
 
 }
