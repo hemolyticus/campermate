@@ -34,6 +34,8 @@
 
     <ion-list no-lines>
 
+        <form [formGroup]="myDetailsForm" (change)="saveForm()">
+
         <ion-item>
 
             <ion-label stacked>
@@ -43,7 +45,7 @@
 
             </ion-label>
 
-            <ion-input type="text">
+            <ion-input type="text" formControlName="carRegistration">
 
 
             </ion-input>
@@ -58,7 +60,7 @@
 
             </ion-label>
 
-            <ion-input type="text">
+            <ion-input type="text" formControlName="trailerRegistration">
 
 
 
@@ -74,7 +76,7 @@
 
             </ion-label>
 
-            <ion-input type="text">
+            <ion-input type="text" formControlName="trailerDimensions">
 
 
 
@@ -90,7 +92,7 @@
 
             </ion-label>
 
-            <ion-input type="text">
+            <ion-input type="text" formControlName="phoneNumber">
 
 
 
@@ -106,13 +108,15 @@
 
             </ion-label>
 
-            <ion-textarea type="text">
+            <ion-textarea type="text" formControlName="notes">
 
 
 
             </ion-textarea>
 
         </ion-item>
+
+        </form>
 
     </ion-list>
 
