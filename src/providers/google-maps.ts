@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { Platform } from 'ionic-angular';
+import { Connectivity } from './connectivity';
+import { Geolocation } from 'ionic-native';
+
+
 
 /*
   Generated class for the GoogleMaps provider.
@@ -11,8 +14,57 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class GoogleMaps {
 
-  constructor(public http: Http) {
-    console.log('Hello GoogleMaps Provider');
+    //Variables
+    mapElement:any;
+    pleaseConnect:any;
+    map:any;
+    mapInitialised: boolean = false;
+    mapLoaded: any;
+    mapLoadedObserver: any;
+    currentMarker: any;
+    apiKey:string;
+
+
+
+
+  constructor(public connectivityService: Connectivity) {
+
+  }
+
+
+  init(mapElement:any, pleaseConnect:any): Promise<any>
+  {
+
+  }
+
+  loadGoogleMaps(): Promise<any>
+  {
+
+
+  }
+
+  disableMap(): void
+  {
+
+
+  }
+
+  enableMap(): void
+  {
+
+
+  }
+
+  addConnectivityListeners():void
+  {
+
+
+  }
+
+  changeMarker(lat: number, lng:number): void
+  {
+
+
   }
 
 }
