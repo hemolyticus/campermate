@@ -15,11 +15,27 @@ import { Data } from '../../providers/data';
 })
 export class CampDetailsPage {
 
-  constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public dataService: Data) {}
+    campDetailsForm: FormGroup;
+
+  constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public dataService: Data)
+  {
+      this.campDetailsForm= formBuilder.group({
+
+          gateAccessCode: [''],
+          amenitiesCode: [''],
+          wifiPassword: [''],
+          phoneNumber: [''],
+          departure: [''],
+          notes: ['']
+      });
+
+  }
 
   saveForm(): void
   {
 
+      let data = this.campDetailsForm.value;
+      //this.dataService.setCampDetails(data);
 
   }
 

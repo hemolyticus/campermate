@@ -32,6 +32,8 @@
 
     <ion-list no-lines>
 
+        <form [formGroup]="campDetailsForm" (change)="saveForm()">
+
         <ion-item>
 
             <ion-label stacked>
@@ -40,7 +42,7 @@
 
             </ion-label>
 
-            <ion-input type="text">
+            <ion-input type="text" formControlName="gateAccessCode">
 
             </ion-input>
 
@@ -55,7 +57,7 @@
             </ion-label>
 
 
-            <ion-input type="text">
+            <ion-input type="text" formControlName="amenitiesCode">
 
 
 
@@ -71,7 +73,7 @@
 
         </ion-label>
 
-        <ion-input type="text">
+        <ion-input type="text" formControlName="wifiPassword">
 
 
 
@@ -87,7 +89,7 @@
 
             </ion-label>
 
-            <ion-input type="text">
+            <ion-input type="text" formControlName="phoneNumber">
 
 
 
@@ -103,7 +105,7 @@
 
             </ion-label>
 
-            <ion-datetime displayFormat="DD/MM/YYYY">
+            <ion-datetime displayFormat="DD/MM/YYYY" formControlName="departure">
 
 
 
@@ -123,14 +125,14 @@
 
             </ion-label>
 
-            <ion-textarea type="text">
+            <ion-textarea type="text" formControlName="notes">
 
 
 
             </ion-textarea>
 
         </ion-item>
-
+        </form>
 
     </ion-list>
 
